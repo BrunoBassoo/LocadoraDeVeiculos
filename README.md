@@ -5,3 +5,27 @@
 - **Gabriel Balbine** ➔ 22.222.001-4
 - **Gabriela Ciocci** ➔ 22.222.032-9
 - **Guilherme Albuquerque** ➔ 22.224.0240-4
+
+---------------------------------------------------
+
+### Descrição
+
+Sua empresa foi contratada para modelar um novo sistema para controle de uma Locadora de veículos regional, chamada VL..
+Atualmente a VL não possui um sistema próprio de controle de locação e todos os processos são manuais, com controle em fichas.
+
+### Objetivo
+
+Automatizar o processo completo desse empresa contratante utilizando métodos de modelos de software, diagrama de caso de uso, requisitos funcionais, não funcionais e atores
+
+### Tópicos necessário
+
+- Cadastro do cliente
+- Escolha do Veículo
+- Locação do Veículo
+- Aluguel
+- Pagamento
+- Devolução
+- Multa
+- Promoções
+- Descontos
+- 
