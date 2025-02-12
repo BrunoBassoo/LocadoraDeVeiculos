@@ -31,3 +31,5 @@ Automatizar o processo completo desse empresa contratante utilizando métodos de
 
 
 ### Use Cases
+
+<img src=UseCasesVL.drawio.png>
