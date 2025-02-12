@@ -28,4 +28,6 @@ Automatizar o processo completo desse empresa contratante utilizando métodos de
 - Multa
 - Promoções
 - Descontos
-- 
+
+
+### Use Cases
