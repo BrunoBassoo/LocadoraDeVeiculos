@@ -38,10 +38,10 @@ Automatizar o processo completo desse empresa contratante utilizando métodos de
 
 <img src=uc_03.png>
 
-4 - Consolidar os pagamentos (UC_04):
+4 - Verificar locações pendentes (UC_04):
 
 <img src=uc_04.png>
-5 - Verificar locações pendentes (UC_05):
+5 - Consolidar os pagamentos (UC_05):
 
 <img src=uc_05.png>
   
