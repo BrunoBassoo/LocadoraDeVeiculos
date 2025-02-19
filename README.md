@@ -17,17 +17,7 @@ Atualmente a VL não possui um sistema próprio de controle de locação e todos
 
 Automatizar o processo completo desse empresa contratante utilizando métodos de modelos de software, diagrama de caso de uso, requisitos funcionais, não funcionais e atores
 
-### Tópicos necessário
-
-- Cadastro do cliente
-- Escolha do Veículo
-- Locação do Veículo
-- Aluguel
-- Pagamento
-- Devolução
-- Multa
-- Promoções
-- Descontos
+## Atividade 1
 
 
 ### Use Cases
