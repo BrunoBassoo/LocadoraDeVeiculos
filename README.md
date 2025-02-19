@@ -42,16 +42,13 @@ Automatizar o processo completo desse empresa contratante utilizando métodos de
 2 - Controlar as locações (UC_02):
 
 
-3 - Definir a categoria dos veículos (UC_03):
+4 - Buscar multas (UC_03):
 
 
-4 - Buscar multas (UC_04):
+5 - Consolidar os pagamentos (UC_04):
 
 
-5 - Consolidar os pagamentos (UC_05):
-
-
-6 - Verificar locações pendentes (UC_06):
+6 - Verificar locações pendentes (UC_05):
 
 
   
