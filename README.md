@@ -39,28 +39,19 @@ Automatizar o processo completo desse empresa contratante utilizando métodos de
 1 - Solicitação de um veículo (UC_01):
 
 
-2 - Autocadastro (UC_02):
+2 - Controlar as locações (UC_02):
 
 
-3 - Ajudar o cliente com sistema (UC_03):
+3 - Definir a categoria dos veículos (UC_03):
 
 
-4 - Liberar o veículo (UC_04):
+4 - Buscar multas (UC_04):
 
 
-5 - Registra as devoluções (UC_05):
+5 - Consolidar os pagamentos (UC_05):
 
 
-6 - Definir as categorias dos veículos (UC_06):
-
-
-7 - Buscar multas (UC_07):
-
-
-8 - Consolidar os pagamentos (UC_08):
-
-
-9 - Verificar locações pendentes (UC_09):
+6 - Verificar locações pendentes (UC_06):
 
 
   
