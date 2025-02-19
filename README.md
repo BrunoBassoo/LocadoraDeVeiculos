@@ -1,48 +1,85 @@
-# - Locadora de Veículos - 
-## Equipe de Desenvolvimento
+# 🚗💨 Locadora de Veículos VL:  Sistema de Gestão de Locações
 
-- **Bruno Basso** ➔ 22.123.067-5
-- **Gabriel Balbine** ➔ 22.222.001-4
-- **Gabriela Ciocci** ➔ 22.222.032-9
-- **Guilherme Albuquerque** ➔ 22.224.0240-4
+[![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)](https://shields.io/)
 
----------------------------------------------------
+## 🌟 Equipe de Desenvolvimento
 
-### Descrição
+Uma equipe dedicada a transformar o controle de locações da VL!
 
-Sua empresa foi contratada para modelar um novo sistema para controle de uma Locadora de veículos regional, chamada VL..
-Atualmente a VL não possui um sistema próprio de controle de locação e todos os processos são manuais, com controle em fichas.
+*   **Bruno Basso** ➔ 22.123.067-5
+*   **Gabriel Balbine** ➔ 22.222.001-4
+*   **Gabriela Ciocci** ➔ 22.222.032-9
+*   **Guilherme Albuquerque** ➔ 22.224.0240-4
 
-### Objetivo
+---
 
-Automatizar o processo completo desse empresa contratante utilizando métodos de modelos de software, diagrama de caso de uso, requisitos funcionais, não funcionais e atores
+## 📖 Sobre o Projeto
 
-## Atividade 1
+A Locadora de Veículos VL, uma empresa regional em crescimento, nos contratou para modernizar sua gestão!  Atualmente, a VL opera com processos manuais e registros em fichas.  Nosso desafio é criar um sistema que automatize e otimize todas as etapas da locação de veículos.
 
+## 🎯 Objetivo
 
-### Diagrama de casos de uso
+Desenvolver um sistema completo para a Locadora VL, abrangendo:
 
-<img src=UseCasesVL.drawio.png>
+*   ✅ **Modelagem de Software:**  Utilizando as melhores práticas para criar uma base sólida.
+*   🗺️ **Diagrama de Caso de Uso:**  Visualizando as interações entre usuários e o sistema.
+*   ⚙️ **Requisitos Funcionais e Não Funcionais:**  Garantindo que o sistema atenda a todas as necessidades da VL.
+*   👥 **Atores:**  Identificando quem interage com o sistema (clientes, funcionários, etc.).
 
-### Use Cases
+## 🚀 Diagrama de Casos de Uso
 
-UC_01 - Solicitação de um veículo:
+Este diagrama mostra as principais funcionalidades do sistema e como os diferentes atores interagem com ele:
 
-<img src=uc_01.png>
+<img src="UseCasesVL.drawio.png" alt="Diagrama de Casos de Uso" width="600">
 
-UC_02 - Controlar as locações:
+## 📝 Casos de Uso Detalhados
 
-<img src=uc_02.png>
+Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alternativos, pré-condições e pós-condições.
 
-UC_03 - Buscar multas:
+### UC_01 - Solicitação de um Veículo
 
-<img src=uc_03.png>
+<details>
+<summary>Clique para expandir</summary>
+<img src="uc_01.png" alt="UC_01 - Solicitação de um Veículo">
+</details>
 
-UC_04 - Verificar locações pendentes:
+### UC_02 - Controlar as Locações
 
-<img src=uc_04.png>
+<details>
+<summary>Clique para expandir</summary>
+<img src="uc_02.png" alt="UC_02 - Controlar as Locações">
+</details>
 
-UC_05 - Consolidar os pagamentos:
+### UC_03 - Buscar Multas
 
-<img src=uc_05.png>
-  
+<details>
+<summary>Clique para expandir</summary>
+<img src="uc_03.png" alt="UC_03 - Buscar Multas">
+</details>
+
+### UC_04 - Verificar Locações Pendentes
+
+<details>
+<summary>Clique para expandir</summary>
+<img src="uc_04.png" alt="UC_04 - Verificar Locações Pendentes">
+</details>
+
+### UC_05 - Consolidar os Pagamentos
+
+<details>
+<summary>Clique para expandir</summary>
+<img src="uc_05.png" alt="UC_05 - Consolidar os Pagamentos">
+</details>
+
+---
+
+## 🛠️ Tecnologias
+
+*   **Diagramas:** [draw.io](http://draw.io)
+*   **Diagramas de Caso de Uso: Excel ** 
+
+## 🤝 Contribuições
+Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
+
+## ✉️ Contato
+Qualquer dúvida sobre o projeto entrar em contato, será um prazer!
