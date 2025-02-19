@@ -20,11 +20,11 @@ Automatizar o processo completo desse empresa contratante utilizando métodos de
 ## Atividade 1
 
 
-### Use Cases
+### Diagrama de casos de uso
 
 <img src=UseCasesVL.drawio.png>
 
-### Descrição dos Use Cases
+### Use Cases
 
 1 - Solicitação de um veículo (UC_01):
 
