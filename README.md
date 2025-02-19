@@ -76,7 +76,7 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
 ## 🛠️ Tecnologias
 
 *   **Diagramas:** [draw.io](http://draw.io)
-*   **Diagramas de Caso de Uso: Excel** 
+*   **Diagramas de Caso de Uso:** ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoft-excel&logoColor=white)
 
 ## 🤝 Contribuições
 Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
