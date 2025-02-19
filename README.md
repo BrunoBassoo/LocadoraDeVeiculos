@@ -26,22 +26,22 @@ Automatizar o processo completo desse empresa contratante utilizando métodos de
 
 ### Use Cases
 
-1 - Solicitação de um veículo (UC_01):
+UC_01 - Solicitação de um veículo:
 
 <img src=uc_01.png>
 
-2 - Controlar as locações (UC_02):
+UC_02 - Controlar as locações:
 
 <img src=uc_02.png>
 
-3 - Buscar multas (UC_03):
+UC_03 - Buscar multas:
 
 <img src=uc_03.png>
 
-4 - Verificar locações pendentes (UC_04):
+UC_04 - Verificar locações pendentes:
 
 <img src=uc_04.png>
-5 - Consolidar os pagamentos (UC_05):
+UC_05 - Consolidar os pagamentos:
 
 <img src=uc_05.png>
   
