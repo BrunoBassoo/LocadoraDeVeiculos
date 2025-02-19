@@ -28,17 +28,20 @@ Automatizar o processo completo desse empresa contratante utilizando métodos de
 
 1 - Solicitação de um veículo (UC_01):
 
+<img src=uc_01.png>
 
 2 - Controlar as locações (UC_02):
 
+<img src=uc_02.png>
 
-4 - Buscar multas (UC_03):
+3 - Buscar multas (UC_03):
 
+<img src=uc_03.png>
 
-5 - Consolidar os pagamentos (UC_04):
+4 - Consolidar os pagamentos (UC_04):
 
+<img src=uc_04.png>
+5 - Verificar locações pendentes (UC_05):
 
-6 - Verificar locações pendentes (UC_05):
-
-
+<img src=uc_05.png>
   
