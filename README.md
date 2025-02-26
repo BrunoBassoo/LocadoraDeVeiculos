@@ -73,12 +73,113 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
 
 ---
 
+## <> Diagrama de Classes
+
+```mermaid
+
+  classDiagram
+
+    Pessoa <|-- Cliente : é
+    Pessoa <|-- Operador : é
+    Pessoa <|-- Atendente : é
+    Operador <|-- TimePatio : é
+
+    Empresa "1" -- "1" Operador : possui
+    Empresa "1" -- "1..*" Veiculo : possui
+    Operador "1..*" -- "*..*" Locacao : efetua
+    Locacao "1" -- "1..*" Veiculo : faz parte
+    Cliente "1" -- "1..*" SistemaPagamento : efetua
+    Atendente "1..*" -- "1..*" Cliente : recebe
+    Veiculo "1..*" -- "1" DETRAN : cadastrado
+    Cliente "1" -- "1..*" Locacao : tem
+
+    class Pessoa{
+        string nome
+        long CPF
+        data nascimento
+        int idade
+        VerificarCPF()
+    }
+
+    class Cliente{
+        int ID
+        string e-mail
+        string senha
+        boolean premium
+        LoginUsuario()
+        Cadastro()
+        SolicitarLocacao()
+        EfetuaPagamento()
+    }
+
+    class Operador{
+        int ID
+        string e-mail
+        string senha
+        VerificarLocacao()
+    }
+
+    class Atendente{
+        int ID
+        string e-mail
+        string senha
+        ReceberCliente()
+        VerificaCadastro()
+    }
+
+    class Empresa{
+        long CNPJ
+        string nome
+        string endereco
+        InicializarSistema()
+        LogarNoServidor()
+    }
+
+    class Locacao{
+        int ID
+        Veiculo veiculo
+        data duracao
+        string categoria
+        VerificarUpgrade()
+    }
+
+    class Veiculo{
+        string marca
+        string modelo
+        int ano
+        int portas
+        boolean ar-condicionado
+        string placa
+        int categoria
+    }
+
+    class TimePatio{
+        Operador funcionario
+        LiberaLocacao()
+        RecebeLocacao()
+    }
+
+    class SistemaPagamento{
+        int ID
+        string tipoPagamento
+        CriaExtrato()
+    }
+
+    class DETRAN{
+        Veiculo veiculo
+        BuscarMulta()
+    }
+
+```
+
+---
+
 ## 🛠️ Tecnologias
 
 *   **Diagramas:** [draw.io](http://draw.io)
 *   **Diagramas de Caso de Uso:** ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoft-excel&logoColor=white)
+*   **Diagramas de Classes:** [mermaid.live](https://mermaid.live/)
 
-## <> Diagrama de Classes
 ## 🤝 Contribuições
 Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
 
