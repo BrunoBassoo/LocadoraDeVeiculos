@@ -73,7 +73,7 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
 
 ---
 
-## <> Diagrama de Classes
+## 🧮 Diagrama de Classes
 
 ```mermaid
 
