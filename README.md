@@ -180,6 +180,34 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
 *   **Diagramas de Caso de Uso:** ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoft-excel&logoColor=white)
 *   **Diagramas de Classes:** [mermaid.live](https://mermaid.live/)
 
+## DIAGRAMA DE SEQUENCIA
+
+Solicitacao de Locacao
+
+```mermaid
+%%{title: "Solicitar Locação de um veículo"}%%
+sequenceDiagram
+    actor Cliente
+    participant C as Cliente
+    actor Operador
+    participant O as Operador
+    
+    
+    Cliente->>C: LoginUsuario()
+    activate C
+    C-->>Cliente: Login feito
+    deactivate C
+    Cliente->>C: SolicitaLocacao()
+    activate C
+    C->>Operador: SolicitarLocacao()
+    Operador->>O: VerificarLocacao()
+    activate O
+    O-->>Cliente: Locacao OK
+    deactivate O
+    deactivate C
+      
+```
+
 ## 🤝 Contribuições
 Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
 
