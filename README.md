@@ -77,7 +77,7 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
 
 ```mermaid
 
-  classDiagram
+classDiagram
 
     Pessoa <|-- Cliente : é
     Pessoa <|-- Operador : é
@@ -108,8 +108,11 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
         boolean premium
         LoginUsuario()
         Cadastro()
+        EscolherCategoriaEVeiculo()
         SolicitarLocacao()
-        EfetuaPagamento()
+        ConsultarPagamento()
+        EfetuarPagamento()
+        RetirarVeiculo()
     }
 
     class Operador{
@@ -123,7 +126,6 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
         int ID
         string e-mail
         string senha
-        ReceberCliente()
         VerificaCadastro()
     }
 
@@ -151,6 +153,8 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
         boolean ar-condicionado
         string placa
         int categoria
+        ExibirInfosCategoriaVeiculo()
+        CategoriaDisponivel()
     }
 
     class TimePatio{
@@ -163,6 +167,7 @@ Abaixo, detalhamos cada caso de uso, mostrando o fluxo principal, fluxos alterna
         int ID
         string tipoPagamento
         CriaExtrato()
+        PagamentoCheck()
     }
 
     class DETRAN{
@@ -189,22 +194,121 @@ Solicitacao de Locacao
 sequenceDiagram
     actor Cliente
     participant C as Cliente
+    actor Atendente
+    participant A as Atendente
+    participant V as Veiculo
+    participant L as Locacao
     actor Operador
     participant O as Operador
+    actor SistemaPagamento
+    participant SP as SistemaPagamento
+    actor TimePatio
+    participant TP as TimePatio
     
-    
+    %% Login 
     Cliente->>C: LoginUsuario()
+
+    %% Fluxo secundario LOGIN NAO EXISTE
+    alt FALHA NO LOGN
+        C->>Atendente: LoginUsuario()
+        Atendente->>A: VerificarCadastro()
+        activate A
+    else USUÁRIO NÃO EXISTE
+        A-->>Cliente: - Necessita de cadastro
+        deactivate A
+        Cliente->>C: Cadastro()
+        activate C 
+        C-->>Cliente: - Cadastro Concluido
+        deactivate C
+        Cliente->>C: LoginUsuario()
+    end
+    %% Segue
     activate C
-    C-->>Cliente: Login feito
+    C-->>Cliente: - Login feito
     deactivate C
+
+
+    %% Escolher categoria e veiculo
+
+    Cliente->>C: EscolherCategoriaVeiculo()
+    activate C
+    C->>V:  EscolherCategoriaVeiculo()
+    deactivate C
+    activate V
+    activate V
+    V-->>V: ExibirInfosCategoriaVeiculo()
+    deactivate V
+
+    %% Fluxo secundario CATEGORIA ESGOTADA
+    alt CATEGORIA ESGOTADA
+        V->>L: CategoriaDisponivel()
+        activate L
+        L->>L: VerificarUpgrade()
+        deactivate L
+        L-->>V: - Upgrade de Categoria
+    end
+
+    %% Segue
+    V-->>Cliente: - Retorna categoria e veiculo
+    deactivate V
+
+
+    %% Solicitar veiculo
+
     Cliente->>C: SolicitaLocacao()
     activate C
     C->>Operador: SolicitarLocacao()
-    Operador->>O: VerificarLocacao()
-    activate O
-    O-->>Cliente: Locacao OK
-    deactivate O
     deactivate C
+    Operador->>O: VerificarLocacao()
+    %% Fluxo secundario LOCACAO NEGADA
+    alt LOCACAO NEGADA
+        O->>O: - KILL
+    end
+    activate O
+    O-->>Cliente: - Locacao OK
+    deactivate O
+    
+
+    %% Extrato
+
+    Cliente->>C: ConsultarPagamento()
+    activate C
+    C->>SistemaPagamento: ConsultarPagamento()
+    deactivate C
+    SistemaPagamento->>SP: CriarExtrato()
+    activate SP
+    SP-->>Cliente: - Extrato OK
+    deactivate SP
+    
+    
+    %% Pagamento
+
+    Cliente->>C: EfetuarPagamento()
+    activate C
+    C->>SistemaPagamento: EfetuarPagamento()
+    %% Fluxo secundario PAGAMENTO NEGADO
+    alt PAGAMENTO NEGADO
+        SistemaPagamento->>SistemaPagamento: - KILL
+    end
+    deactivate C
+    SistemaPagamento->>SP: PagamentoCheck()
+    activate SP
+    SP-->>Cliente: - Pagamento OK
+    deactivate SP
+    
+
+    %% Retirar Veiculo
+
+    Cliente->>C: RetirarVeiculo()
+    activate C 
+    C->>TimePatio: RetirarVeiculo()
+    deactivate C
+    activate TimePatio
+    TimePatio->>TP: LiberarVeiculo()
+    activate TP
+    TP-->>Cliente: - Veiculo Liberado
+    deactivate TP
+
       
 ```
 
