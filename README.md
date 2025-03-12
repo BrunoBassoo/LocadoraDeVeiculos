@@ -187,7 +187,7 @@ classDiagram
 
 ## DIAGRAMA DE SEQUENCIA
 
-Solicitacao de Locacao
+Solicitação de um Veículo
 
 ```mermaid
 %%{title: "Solicitar Locação de um veículo"}%%
