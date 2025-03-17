@@ -329,7 +329,7 @@ sequenceDiagram
     activate C
     C->>TimePatio: SolicitarLocação()
     deactivate C
-    TimePatio->>TP: LiberarSolicitação()
+    TimePatio->>TP: LiberarLocação()
     activate TP
     TP-->>Cliente: - Veículo liberado
     deactivate TP
