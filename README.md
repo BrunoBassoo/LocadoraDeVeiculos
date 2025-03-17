@@ -345,6 +345,24 @@ sequenceDiagram
     deactivate TP
 
 ```
+
+3 - Buscar Multas
+
+``` mermaid
+%%{title: "Buscar multas"}%%
+sequenceDiagram
+    actor Detran
+    participant DT as Detran
+    actor Cliente
+
+    Detran->>DT: BuscarMulta()
+    activate DT
+    DT->>DT: BuscarMulta()
+    alt Se existir multa
+    DT->>Cliente: EnviarMulta()
+    end
+    deactivate DT
+```
 ## 🤝 Contribuições
 Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
 
