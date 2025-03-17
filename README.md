@@ -181,9 +181,10 @@ classDiagram
 
 ## 🛠️ Tecnologias
 
-*   **Diagramas:** [draw.io](http://draw.io)
+*   **Diagramas:** ![Draw.io](https://img.shields.io/badge/draw.io-diagrams.net-orange?logo=drawio&logoColor=white)
 *   **Diagramas de Caso de Uso:** ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoft-excel&logoColor=white)
-*   **Diagramas de Classes:** [mermaid.live](https://mermaid.live/)
+*   **Diagramas de Classes:** ![Mermaid](https://img.shields.io/badge/Mermaid-Diagram-blue?logo=mermaid&logoColor=white)
+
 
 ## DIAGRAMA DE SEQUENCIA
 
