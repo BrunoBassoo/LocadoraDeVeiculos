@@ -113,6 +113,7 @@ classDiagram
         ConsultarPagamento()
         EfetuarPagamento()
         RetirarVeiculo()
+        DevolverVeiculo()
     }
 
     class Operador{
