@@ -322,7 +322,7 @@ sequenceDiagram
     actor Cliente
     participant C as Cliente
     actor TimePatio
-    participant TimePatio as TP
+    participant TP as TimePatio
     
     Cliente->>C: SoliticarLocação()
     activate C
@@ -343,6 +343,7 @@ sequenceDiagram
     activate TP
     TP-->Cliente: - Veículo devolvido
     deactivate TP
+
 ```
 ## 🤝 Contribuições
 Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
