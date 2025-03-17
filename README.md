@@ -356,13 +356,18 @@ sequenceDiagram
     participant DT as Detran
     actor Cliente
 
-    Detran->>DT: BuscarMulta()
+    DT->>Detran: BuscarMulta()
     activate DT
-    DT->>DT: BuscarMulta()
+    activate Detran
+    Detran->>Detran: BuscarMulta()
+    
+    Detran-->>DT: - retornar multa
+    
     alt Se existir multa
     DT->>Cliente: EnviarMulta()
     end
     deactivate DT
+
 ```
 ## 🤝 Contribuições
 Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
