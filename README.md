@@ -113,7 +113,7 @@ classDiagram
         ConsultarPagamento()
         EfetuarPagamento()
         RetirarVeiculo()
-        DevolverVeiculo()
+        DevolverVeículo()
     }
 
     class Operador{
@@ -128,7 +128,7 @@ classDiagram
         string e-mail
         string senha
         VerificaCadastro()
-        RecusarLocacao()
+        RecusarLocação()
     }
 
     class Empresa{
@@ -175,6 +175,7 @@ classDiagram
     class DETRAN{
         Veiculo veiculo
         BuscarMulta()
+        EnviarMulta()
     }
 
 ```
