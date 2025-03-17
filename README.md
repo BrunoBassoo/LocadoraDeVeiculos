@@ -190,7 +190,7 @@ classDiagram
 
 ## DIAGRAMA DE SEQUENCIA
 
-Solicitação de um Veículo
+1 - Solicitação de um Veículo
 
 ```mermaid
 %%{title: "Solicitar Locação de um veículo"}%%
@@ -314,6 +314,36 @@ sequenceDiagram
     deactivate TP
 ```
 
+2 - Controlar as locações
+
+```mermaid
+%%{title: "Controlar as locações"}%%
+sequenceDiagram
+    actor Cliente
+    participant C as Cliente
+    actor TimePatio
+    participant TimePatio as TP
+    
+    Cliente->>C: SoliticarLocação()
+    activate C
+    C->>TimePatio: SolicitarLocação()
+    deactivate C
+    TimePatio->>TP: LiberarSolicitação()
+    activate TP
+    TP-->>Cliente: - Veículo liberado
+    deactivate TP
+    activate Cliente
+    Cliente->>Cliente: RetirarVeiculo()
+    deactivate Cliente
+    Cliente->>C: DevolverVeículo()
+    activate C
+    C->>TimePatio: DevolverVeículo()
+    deactivate C
+    TimePatio->>TP: ReceberVeículo()
+    activate TP
+    TP-->Cliente: - Veículo devolvido
+    deactivate TP
+```
 ## 🤝 Contribuições
 Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
 
