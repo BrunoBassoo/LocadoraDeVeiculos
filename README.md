@@ -263,11 +263,11 @@ sequenceDiagram
     deactivate C
     Operador->>O: VerificarLocacao()
     %% Fluxo secundario LOCACAO NEGADA
+    activate O
     alt LOCACAO NEGADA
         O-->>A: - Existe locação pendente
         A-->>C: RecusarLocacao() 
     end
-    activate O
     O-->>Cliente: - Locacao OK
     deactivate O
     
@@ -311,7 +311,6 @@ sequenceDiagram
     activate TP
     TP-->>Cliente: - Veiculo Liberado
     deactivate TP
-
 ```
 
 ## 🤝 Contribuições
