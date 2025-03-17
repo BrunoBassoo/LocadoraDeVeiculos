@@ -127,6 +127,7 @@ classDiagram
         string e-mail
         string senha
         VerificaCadastro()
+        RecusarLocacao()
     }
 
     class Empresa{
@@ -263,7 +264,8 @@ sequenceDiagram
     Operador->>O: VerificarLocacao()
     %% Fluxo secundario LOCACAO NEGADA
     alt LOCACAO NEGADA
-        O->>O: - KILL
+        O-->>A: - Existe locação pendente
+        A-->>C: RecusarLocacao() 
     end
     activate O
     O-->>Cliente: - Locacao OK
@@ -310,7 +312,6 @@ sequenceDiagram
     TP-->>Cliente: - Veiculo Liberado
     deactivate TP
 
-      
 ```
 
 ## 🤝 Contribuições
