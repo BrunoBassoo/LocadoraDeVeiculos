@@ -340,7 +340,7 @@ sequenceDiagram
     activate C
     C->>TimePatio: DevolverVeículo()
     deactivate C
-    TimePatio->>TP: ReceberVeículo()
+    TimePatio->>TP: ReceberLocação()
     activate TP
     TP-->Cliente: - Veículo devolvido
     deactivate TP
