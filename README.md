@@ -189,9 +189,17 @@ classDiagram
 *   **Diagramas de Classes:** ![Mermaid](https://img.shields.io/badge/Mermaid-Diagram-blue?logo=mermaid&logoColor=white)
 
 
-## DIAGRAMA DE SEQUENCIA
+## 📌 Diagrama de Sequência
 
-1 - Solicitação de um Veículo
+1. Solicitação de um Veículo
+2. Controle das Locações
+3. Buscar Multas
+4. Consolidar Pagamentos
+
+---
+
+### 1️⃣ Solicitação de um Veículo
+Este diagrama ilustra o processo de login, escolha de veículo, solicitação de locação, pagamento e retirada do veículo pelo cliente.
 
 ```mermaid
 %%{title: "Solicitar Locação de um veículo"}%%
@@ -315,7 +323,10 @@ sequenceDiagram
     deactivate TP
 ```
 
-2 - Controlar as locações
+---
+
+### 2️⃣ Controle das Locações
+Este diagrama ilustra o fluxo de liberação e devolução de um veículo alugado.
 
 ```mermaid
 %%{title: "Controlar as locações"}%%
@@ -347,7 +358,10 @@ sequenceDiagram
 
 ```
 
-3 - Buscar Multas
+---
+
+### 3️⃣ Buscar Multas
+O diagrama abaixo representa o processo de busca de multas associadas ao veículo alugado.
 
 ``` mermaid
 %%{title: "Buscar multas"}%%
@@ -367,8 +381,42 @@ sequenceDiagram
     DT->>Cliente: EnviarMulta()
     end
     deactivate DT
-
 ```
+
+---
+
+### 4️⃣ Consolidar Pagamentos
+Este diagrama detalha como os pagamentos são processados e confirmados para o cliente.
+
+```mermaid
+%%{title: "Consolidar os pagamentos"}%%
+sequenceDiagram
+    actor Cliente
+    participant C as Cliente
+    actor SistemaDePagamento
+    participant SP as SistemaDePagamento
+    
+    Cliente->>C: ConsultarPagamento()
+    activate C
+    C->>SistemaDePagamento: ConsultarPagamento()
+    deactivate C
+    SistemaDePagamento->>SP: CriarExtrato()
+    activate SP
+    SP-->>Cliente: - Extrato gerado ao cliente
+    deactivate SP
+    Cliente->>C: EfetuarPagamento()
+    activate C 
+    C->>SistemaDePagamento: EfetuarPagamento()
+    deactivate C
+    SistemaDePagamento->>SP: PagamentoCheck()
+    activate SP
+    SP-->>Cliente: - Pagamento Efetuado
+    deactivate SP
+    
+```
+
+---
+
 ## 🤝 Contribuições
 Contribuições para aprimorar este projeto são muito bem-vindas, forke o projeto e contribua!
 
