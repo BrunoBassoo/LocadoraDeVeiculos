@@ -372,9 +372,27 @@ sequenceDiagram
     end
     deactivate DT
 ```
+### 4️⃣5️ Verificar Locações Pendentes
+O diagrama detalha a parte de verificação de uma locação do cliente.
 
+```mermaid
 
-### 4️⃣ Consolidar Pagamentos
+%%{title: "Verificar Locações Pendentes"}%%
+sequenceDiagram
+    actor Operador
+    participant O as Operador
+
+    Operador->>O: VerificarLocação()
+    activate O
+    alt Cliente tem uma locação pendente
+        O->>O: - KILL()
+    end
+    O-->>Operador: - Locação OK
+    deactivate O
+
+```
+
+### 4️⃣5️⃣ Consolidar Pagamentos
 Este diagrama detalha como os pagamentos são processados e confirmados para o cliente.
 
 ```mermaid
