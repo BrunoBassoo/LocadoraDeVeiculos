@@ -182,13 +182,6 @@ classDiagram
 
 ---
 
-## 🛠️ Tecnologias
-
-*   **Diagramas:** ![Draw.io](https://img.shields.io/badge/draw.io-diagrams.net-orange?logo=drawio&logoColor=white)
-*   **Diagramas de Caso de Uso:** ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoft-excel&logoColor=white)
-*   **Diagramas de Classes:** ![Mermaid](https://img.shields.io/badge/Mermaid-Diagram-blue?logo=mermaid&logoColor=white)
-
-
 ## 📌 Diagrama de Sequência
 
 1. Solicitação de um Veículo
@@ -196,7 +189,6 @@ classDiagram
 3. Buscar Multas
 4. Consolidar Pagamentos
 
----
 
 ### 1️⃣ Solicitação de um Veículo
 Este diagrama ilustra o processo de login, escolha de veículo, solicitação de locação, pagamento e retirada do veículo pelo cliente.
@@ -414,6 +406,15 @@ sequenceDiagram
     deactivate SP
     
 ```
+
+---
+
+## 🛠️ Tecnologias
+
+*   **Diagramas:** ![Draw.io](https://img.shields.io/badge/draw.io-diagrams.net-orange?logo=drawio&logoColor=white)
+*   **Diagramas de Caso de Uso:** ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?logo=microsoft-excel&logoColor=white)
+*   **Diagramas de Classes:** ![Mermaid](https://img.shields.io/badge/Mermaid-Diagram-blue?logo=mermaid&logoColor=white)
+*   **Diagrama de Sequência:** ![Mermaid](https://img.shields.io/badge/Mermaid-Diagram-blue?logo=mermaid&logoColor=white)
 
 ---
 
