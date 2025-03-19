@@ -372,7 +372,7 @@ sequenceDiagram
     end
     deactivate DT
 ```
-### 4️⃣5️ Verificar Locações Pendentes
+### 4️⃣ Verificar Locações Pendentes
 O diagrama detalha a parte de verificação de uma locação do cliente.
 
 ```mermaid
@@ -392,7 +392,7 @@ sequenceDiagram
 
 ```
 
-### 4️⃣5️⃣ Consolidar Pagamentos
+### 5️⃣ Consolidar Pagamentos
 Este diagrama detalha como os pagamentos são processados e confirmados para o cliente.
 
 ```mermaid
