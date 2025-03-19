@@ -315,7 +315,6 @@ sequenceDiagram
     deactivate TP
 ```
 
----
 
 ### 2️⃣ Controle das Locações
 Este diagrama ilustra o fluxo de liberação e devolução de um veículo alugado.
@@ -350,7 +349,6 @@ sequenceDiagram
 
 ```
 
----
 
 ### 3️⃣ Buscar Multas
 O diagrama abaixo representa o processo de busca de multas associadas ao veículo alugado.
@@ -375,7 +373,6 @@ sequenceDiagram
     deactivate DT
 ```
 
----
 
 ### 4️⃣ Consolidar Pagamentos
 Este diagrama detalha como os pagamentos são processados e confirmados para o cliente.
