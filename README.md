@@ -188,6 +188,7 @@ classDiagram
 2. Controle das Locações
 3. Buscar Multas
 4. Consolidar Pagamentos
+5. Consolidar Pagamentos
 
 
 ### 1️⃣ Solicitação de um Veículo
@@ -420,6 +421,33 @@ sequenceDiagram
     SP-->>Cliente: - Pagamento Efetuado
     deactivate SP
     
+```
+
+---
+## 📈 Diagrama de Sequência
+
+1. Cliente
+
+### 1️⃣ Cliente
+```mermaid
+stateDiagram
+    [*] --> LogandoUsuario
+    LogandoUsuario --> CadastrandoUsuario : [conta não existente]
+
+    LogandoUsuario --> EscolhendoVeiculo : [logado na conta]
+    CadastrandoUsuario --> EscolhendoVeiculo : [cadastro efetuado]
+
+    EscolhendoVeiculo --> SolicitandoLocacao : [categoria disponível]
+    EscolhendoVeiculo --> SolicitandoLocacao : [categoria esgotada, recebe upgrade]
+
+    SolicitandoLocacao --> SolicitandoPagamento : [locação efetuada]
+    SolicitandoLocacao --> [*] : [existe locação pendente]
+
+    SolicitandoPagamento --> [*] : [pagamento negado]
+    SolicitandoPagamento --> RetirandoVeiculo : [pagamento efetuado]
+
+    RetirandoVeiculo --> DevolvendoVeiculo : [após o tempo de locação]
+    DevolvendoVeiculo --> [*] : [processo encerrado]
 ```
 
 ---
