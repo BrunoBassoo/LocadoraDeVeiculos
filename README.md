@@ -426,8 +426,6 @@ sequenceDiagram
 ---
 ## 📈 Diagrama de Sequência
 
-1. Cliente
-
 ### 1️⃣ Cliente
 ```mermaid
 stateDiagram
