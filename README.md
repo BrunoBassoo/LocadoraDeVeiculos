@@ -447,7 +447,16 @@ stateDiagram
     RetirandoVeiculo --> DevolvendoVeiculo : [após o tempo de locação]
     DevolvendoVeiculo --> [*] : [processo encerrado]
 ```
+### 2️⃣ Detran
 
+```mermaid
+stateDiagram
+  direction TB
+  [*] --> BuscarMulta
+  BuscarMulta --> EnviarMulta : [achou uma multa]
+  BuscarMulta --> [*] : [não achou uma multa]
+  EnviarMulta --> [*]
+```
 ---
 
 ## 🛠️ Tecnologias
