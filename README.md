@@ -170,6 +170,8 @@ classDiagram
         string tipoPagamento
         CriaExtrato()
         PagamentoCheck()
+        CancelaPagamento()
+        GerarEstorno()
     }
 
     class DETRAN{
@@ -457,6 +459,18 @@ stateDiagram
   BuscarMulta --> [*] : [não achou uma multa]
   EnviarMulta --> [*]
 ```
+### 3️⃣ SistemaPagamento
+
+```mermaid
+stateDiagram
+  direction TB
+  [*] --> CheckPagamento():[Locação foi feita]
+  CheckPagamento() --> CriaExtrato():[Pagamento realizado]
+  CheckPagamento() --> CancelaPagamento():[Pagamento não efetuado]
+  CriaExtrato() --> GerarEstorno():[Se falhar]
+  CriaExtrato() --> [*]
+```
+
 ---
 
 ## 🛠️ Tecnologias
