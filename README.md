@@ -99,6 +99,7 @@ classDiagram
         data nascimento
         int idade
         VerificarCPF()
+        RecusaCPF()
     }
 
     class Cliente{
@@ -121,6 +122,7 @@ classDiagram
         string e-mail
         string senha
         VerificarLocacao()
+        RecusaLocacao()
     }
 
     class Atendente{
@@ -156,7 +158,7 @@ classDiagram
         string placa
         int categoria
         ExibirInfosCategoriaVeiculo()
-        CategoriaDisponivel()
+        VerificarEstado()
     }
 
     class TimePatio{
@@ -470,6 +472,46 @@ stateDiagram
   CriaExtrato() --> GerarEstorno():[Se falhar]
   CriaExtrato() --> [*]
 ```
+
+### 4️⃣ Veículo
+
+```mermaid
+
+stateDiagram
+  direction TB
+  [*] --> ExibirInfosCategoriaVeiculo():[Ao realizar pesquisa]
+  ExibirInfosCategoriaVeiculo() --> VerificarEstado():[Veículo escolhido]
+  VerificarEstado() --> ReijeitaVeiculo(): [Se estiver em estado ruim]
+  VerificarEstado() --> [*]
+```
+
+
+### 5️⃣ Pessoa
+
+```mermaid
+
+stateDiagram
+  direction TB
+  [*] --> VerificaCPF()
+  VerificaCPF() --> RecusaCPF():[CPF irregular]
+  VerificaCPF() --> [*]
+```
+### 6️⃣ Operador
+
+```mermaid
+
+stateDiagram
+  direction TB
+  [*] --> VerificaLocacao():[Após solicitação]
+  VerificaLocacao() --> [*] : [Caso não possua locações pendentes]  
+
+```
+
+### 7️⃣
+```mermaid
+
+```
+
 
 ---
 
