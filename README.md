@@ -163,8 +163,9 @@ classDiagram
 
     class TimePatio{
         Operador funcionario
-        LiberaLocacao()
         RecebeLocacao()
+        ValidaDocumentos()
+        LiberaVeiculo()
     }
 
     class SistemaPagamento{
@@ -507,9 +508,16 @@ stateDiagram
 
 ```
 
-### 7️⃣
-```mermaid
+### 7️⃣ TimePatio
 
+```mermaid
+stateDiagram
+  direction TB
+  [*] --> RecebeLocacao() : [Se o atendente liberar a locação]
+  RecebeLocacao() --> ValidaDocumentos()
+  ValidaDocumentos() --> LiberaVeiculo() : [Se os documentos estiverem validados]
+  ValidaDocumentos() --> CancelaLiberacao() : [Se os documentos estiverem inválidos]
+  LiberaVeiculo() --> [*]  
 ```
 
 
