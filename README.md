@@ -520,6 +520,18 @@ stateDiagram
   LiberaVeiculo() --> [*]  
 ```
 
+### 8️⃣ Atendente
+
+```mermaid
+stateDiagram
+  direction TB
+  [*] --> VerificaCadastro()
+  VerificaCadastro() --> LiberacaoTimePátio()
+  LiberacaoTimePátio() --> RecusaLocacao() : [Se o operador retornar locações pendentes]
+  LiberacaoTimePátio() --> [*] 
+
+```
+
 
 ---
 
