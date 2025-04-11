@@ -533,7 +533,14 @@ stateDiagram
 
 ```
 
-### 9️⃣ 
+### 9️⃣ Locacao
+
+```mermaid
+stateDiagram
+  direction TB
+  [*] --> VerificarUpgrade()  
+  VerificarUpgrade() --> [*] : [Se tiver upgrade]
+```
 
 ---
 
