@@ -130,6 +130,7 @@ classDiagram
         string e-mail
         string senha
         VerificaCadastro()
+        LiberacaoTimePatio()
         RecusarLocação()
     }
 
@@ -526,12 +527,13 @@ stateDiagram
 stateDiagram
   direction TB
   [*] --> VerificaCadastro()
-  VerificaCadastro() --> LiberacaoTimePátio()
-  LiberacaoTimePátio() --> RecusaLocacao() : [Se o operador retornar locações pendentes]
-  LiberacaoTimePátio() --> [*] 
+  VerificaCadastro() --> LiberacaoTimePatio()
+  LiberacaoTimePatio() --> RecusaLocacao() : [Se o operador retornar locações pendentes]
+  LiberacaoTimePatio() --> [*] 
 
 ```
 
+### 9️⃣ 
 
 ---
 
