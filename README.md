@@ -546,10 +546,11 @@ stateDiagram
 
 ### Sistema de Pagamento
 
-<img src=https://github.com/BrunoBassoo/LocadoraDeVeiculos/blob/main/Untitled%20Diagram.drawio.svg>
+<img src=https://github.com/BrunoBassoo/LocadoraDeVeiculos/blob/main/atv1branco.svg>
 
 ### Sistema da Liberação do Veículo
 
+<img src=https://github.com/BrunoBassoo/LocadoraDeVeiculos/blob/main/atv2.drawio.svg>
 ---
 
 ## 🛠️ Tecnologias
