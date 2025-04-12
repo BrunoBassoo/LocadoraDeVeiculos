@@ -542,6 +542,14 @@ stateDiagram
   VerificarUpgrade() --> [*] : [Se tiver upgrade]
 ```
 
+## 🎱 Diagramas de Atividades
+
+### Sistema de Pagamento
+
+<img src=https://github.com/BrunoBassoo/LocadoraDeVeiculos/blob/main/Untitled%20Diagram.drawio.svg>
+
+### Sistema da Liberação do Veículo
+
 ---
 
 ## 🛠️ Tecnologias
