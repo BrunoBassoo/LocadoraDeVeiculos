@@ -553,6 +553,70 @@ stateDiagram
 <img src=https://github.com/BrunoBassoo/LocadoraDeVeiculos/blob/main/atv2.drawio.svg>
 ---
 
+## 🖥️ Diagramas de Componentes e Integração
+
+```mermaid
+graph TD
+    subgraph "Sistema Locadora VL - Componentes"
+        WebApp_Portal[<<executable>><br>PortalCliente.war]
+        WebApp_Interna[<<executable>><br>SistemaInterno.war]
+
+        subgraph "<<library>> LogicaNegocioCentral.dll/jar"
+            direction LR
+            GestaoClientes[Gestão Clientes]
+            GestaoVeiculos[Gestão Veículos]
+            GestaoLocacoes[Gestão Locações]
+            GestaoPromocoes[Gestão Promoções]
+            RegrasGerais[Regras Gerais]
+        end
+
+        IntegracaoPagamento[<<component>><br>IntegracaoPagamento.dll/jar]
+        IntegracaoDetran[<<component>><br>IntegracaoDetran.dll/jar]
+        BancoDeDados[<<database>><br>BancoDadosVL]
+        ComponenteOCR[(<<library>> <br>ComponenteOCR.dll/jar)]
+        %% Opcional: Componente para reconhecimento de documentos
+
+        %% Dependências
+        WebApp_Portal --> GestaoClientes
+        WebApp_Portal --> GestaoVeiculos
+        WebApp_Portal --> GestaoLocacoes
+        WebApp_Portal --> GestaoPromocoes
+        WebApp_Portal --> IntegracaoPagamento
+        %% Cliente inicia pagamento via Portal
+
+        WebApp_Interna --> GestaoClientes
+        WebApp_Interna --> GestaoVeiculos
+        WebApp_Interna --> GestaoLocacoes
+        WebApp_Interna --> GestaoPromocoes
+        WebApp_Interna --> RegrasGerais
+        WebApp_Interna --> IntegracaoDetran
+        %% Funcionário busca multas via Sistema Interno
+        WebApp_Interna --> IntegracaoPagamento
+        %% Funcionário consulta/consolida pagamentos via Sistema Interno
+        WebApp_Interna --> ComponenteOCR
+        %% Opcional: App interna usa OCR
+
+        GestaoLocacoes --> GestaoVeiculos
+        GestaoLocacoes --> GestaoClientes
+        GestaoLocacoes --> GestaoPromocoes
+        GestaoLocacoes --> RegrasGerais
+        GestaoLocacoes --> IntegracaoPagamento
+        %% Lógica de negócio dispara verificações/operações de pagamento
+        GestaoLocacoes --> IntegracaoDetran
+        %% Lógica pode precisar checar multas (ex: na devolução)
+
+        %% Persistência e APIs Externas
+        GestaoClientes --> BancoDeDados
+        GestaoVeiculos --> BancoDeDados
+        GestaoLocacoes --> BancoDeDados
+        GestaoPromocoes --> BancoDeDados
+        %%Nao sei se precisa ter gestaopromocoes, mas adicionei)
+
+        IntegracaoPagamento -.-> APIGatewayPagamento("<<external>> API Gateway Pagamento")
+        IntegracaoDetran -.-> APIDetran("<<external>> API DETRAN")
+    end
+```
+
 ## 🛠️ Tecnologias
 
 *   **Diagramas:** ![Draw.io](https://img.shields.io/badge/draw.io-diagrams.net-orange?logo=drawio&logoColor=white)
