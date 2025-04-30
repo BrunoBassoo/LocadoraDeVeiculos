@@ -1,6 +1,7 @@
 # 🚗💨 Locadora de Veículos VL:  Sistema de Gestão de Locações
 
-[![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)](https://shields.io/)
+![Status do Projeto](https://img.shields.io/badge/Projeto-Concluído-success)
+
 
 ## 🌟 Equipe de Desenvolvimento
 
